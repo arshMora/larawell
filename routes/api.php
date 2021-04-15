@@ -16,6 +16,10 @@ use Illuminate\Http\Request;
 Route::get('/getusers/','UserController@getUsers');
 Route::post('/postusers/','UserController@postUsers');
 Route::patch('/updateusers/','UserController@updateUsers');
-Route::post('/registrationusers/','UserController@registrationUsers');
-Route::post('/postregistr/','RegistrController@postRegistr');
-Route::post('/autoregistr/','RegistrController@autoRegistr');
+
+Route::post('/registration/','loginorsigninController@registrationUsers');
+Route::post('/authorization/','loginorsigninController@authorizationUsers');
+
+Route::get('/getproducts/','productsController@getProducts');
+Route::post('/postproducts/','productsController@postProducts');
+Route::delete('/deleteproducts/','productsController@deleteProducts');
